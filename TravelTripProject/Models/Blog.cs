@@ -18,5 +18,6 @@ namespace TravelTripProject.Models
         public string Description { get; set; }
 
         public string ImageUrl { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }
