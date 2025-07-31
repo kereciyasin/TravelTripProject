@@ -1,0 +1,19 @@
+﻿@model List<TravelTripProject.Models.About>
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>About</h3>
+            @foreach (var item in Model)
+            {
+                <img src="@item.PhotoUrl" alt="About Image" />
+                <p>@item.Description</p>
+            }
+        </div>
+    </div>
+</div>
