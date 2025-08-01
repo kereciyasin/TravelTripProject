@@ -1,4 +1,4 @@
-﻿
+﻿@model List<TravelTripProject.Models.Blog>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -59,12 +59,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="header_bottom_right_images">
 
-                        <div class="slider">
+                        <div class="slider" style="width:650px; height:365px">
                             <ul class="rslides" id="slider1">
-                                <li><img src="~/web/images/img1.jpg" alt=""></li>
-                                <li><img src="~/web/images/img2.jpg" alt=""></li>
-                                <li><img src="~/web/images/img3.jpg" alt=""></li>
-                                <li><img src="~/web/images/img4.jpg" alt=""></li>
+                                @foreach (var item in Model)
+                                {
+                                    <li><img src="@item.ImageUrl" alt=""></li>
+                                }
                             </ul>
                         </div>
                     </div>
