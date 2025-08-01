@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TravelTripProject.Data;
+using TravelTripProject.Models;
 
 namespace TravelTripProject.Controllers
 {
@@ -11,6 +12,7 @@ namespace TravelTripProject.Controllers
     {
         // GET: Blog
         Context context = new Context();
+        BlogCommentViewModel blogComment = new BlogCommentViewModel();
         public ActionResult Index()
         {
             var blogs = context.Blogs.ToList();
@@ -18,8 +20,9 @@ namespace TravelTripProject.Controllers
         }
         public ActionResult BlogDetails(int id)
         {
-            var blog = context.Blogs.Where(x => x.Id == id).ToList();
-            return View(blog);
+            //var blog = context.Blogs.Where(x => x.Id == id).ToList();
+            blogComment.Value1 = context.Blogs.Where(x => x.Id == id).ToList();
+            return View(blogComment);
         }
     }
 }

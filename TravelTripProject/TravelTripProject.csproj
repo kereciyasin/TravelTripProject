@@ -140,6 +140,7 @@
     <Compile Include="Models\AddressBlog.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BlogCommentViewModel.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\HomePage.cs" />
