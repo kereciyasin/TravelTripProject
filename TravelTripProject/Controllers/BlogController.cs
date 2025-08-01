@@ -22,6 +22,7 @@ namespace TravelTripProject.Controllers
         {
             //var blog = context.Blogs.Where(x => x.Id == id).ToList();
             blogComment.Value1 = context.Blogs.Where(x => x.Id == id).ToList();
+            blogComment.Value2 = context.Comments.Where(x => x.BlogId == id).ToList();
             return View(blogComment);
         }
     }
