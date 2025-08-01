@@ -1,4 +1,4 @@
-﻿@model List<TravelTripProject.Models.Blog>
+﻿@model TravelTripProject.Models.BlogCommentViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -64,7 +64,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
-                @foreach (var item in Model)
+                @foreach (var item in Model.Value1)
                 {
                     <div class="single-grid">
                         <img src="@item.ImageUrl" alt="" />
@@ -79,12 +79,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-md-4 side-content">
                 <div class="recent">
                     <h3>RECENT POSTS</h3>
-                    <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                        <li><a href="#">Nunc dignissim risus consecu</a></li>
-                        <li><a href="#">Cras ornare tristiqu</a></li>
-                    </ul>
+                    @foreach (var x in Model.Value3)
+                    {
+                        <ul>
+                            <li><a href="/Blog/BlogDetails/@x.Id">@x.Title</a></li>
+                        </ul>
+                    }
                 </div>
                 <div class="comments">
                     <h3>RECENT COMMENTS</h3>

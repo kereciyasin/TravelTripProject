@@ -15,8 +15,10 @@ namespace TravelTripProject.Controllers
         BlogCommentViewModel blogComment = new BlogCommentViewModel();
         public ActionResult Index()
         {
-            var blogs = context.Blogs.ToList();
-            return View(blogs);
+            //var blogs = context.Blogs.ToList();
+            blogComment.Value1 = context.Blogs.ToList();
+            blogComment.Value3 = context.Blogs.OrderByDescending(x => x.Id).Take(3).ToList();
+            return View(blogComment);
         }
         public ActionResult BlogDetails(int id)
         {
@@ -25,5 +27,6 @@ namespace TravelTripProject.Controllers
             blogComment.Value2 = context.Comments.Where(x => x.BlogId == id).ToList();
             return View(blogComment);
         }
+
     }
 }
