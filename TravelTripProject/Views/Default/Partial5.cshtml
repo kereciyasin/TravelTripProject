@@ -3,7 +3,7 @@
     @foreach (var item in Model)
     {
         <div class="bot-img">
-            <img src="@item.ImageUrl " alt="" />
+            <img src="@item.ImageUrl" style="width:120px; height:65px" alt="" />
         </div>
         <div class="bot-desc1">
             <p>@item.Description.Substring(0, 80)...</p>
