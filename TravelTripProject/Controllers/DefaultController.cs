@@ -12,7 +12,7 @@ namespace TravelTripProject.Controllers
         Context context = new Context();
         public ActionResult Index()
         {
-            var values = context.Blogs.ToList();
+            var values = context.Blogs.Take(10).ToList();
             return View(values);
         }
 
@@ -30,6 +30,11 @@ namespace TravelTripProject.Controllers
         public PartialViewResult Partial2()
         {
             var values = context.Blogs.Where(x => x.Id == 1).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult Partial3()
+        {
+            var values = context.Blogs.ToList();
             return PartialView(values);
         }
     }
