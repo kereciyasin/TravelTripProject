@@ -37,5 +37,15 @@ namespace TravelTripProject.Controllers
             var values = context.Blogs.ToList();
             return PartialView(values);
         }
+        public PartialViewResult Partial4()
+        {
+            var values = context.Blogs.Take(3).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult Partial5()
+        {
+            var values = context.Blogs.Take(3).OrderByDescending(x => x.Id).ToList();
+            return PartialView(values);
+        }
     }
 }
