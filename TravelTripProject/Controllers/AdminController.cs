@@ -42,5 +42,27 @@ namespace TravelTripProject.Controllers
             var blog = context.Blogs.Find(id);
             return View("BlogDetails", blog);
         }
+        // GET: Admin/Edit/5
+        public ActionResult Edit(int id)
+        {
+            var blog = context.Blogs.Find(id);
+            return View(blog);
+        }
+
+        // POST: Admin/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Blog updatedBlog)
+        {
+            var blog = context.Blogs.Find(updatedBlog.Id);
+            blog.Title = updatedBlog.Title;
+            blog.Description = updatedBlog.Description;
+            blog.ImageUrl = updatedBlog.ImageUrl;
+            blog.Date = updatedBlog.Date;
+            context.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+
     }
 }
