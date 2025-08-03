@@ -1,0 +1,23 @@
+﻿@model TravelTripProject.Models.Blog
+@{
+    ViewBag.Title = "BlogDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container mt-5">
+    <h2 class="mb-3">@Model.Title</h2>
+
+    <p><strong>Date:</strong> @Model.Date.ToShortDateString()</p>
+
+    <div class="mb-4">
+        <img src="@Model.ImageUrl"
+             alt="Blog Image"
+             class="img-thumbnail"
+             style="width: 600px; max-width: 100%; height: auto;" />
+
+    </div>
+
+    <p>@Model.Description</p>
+
+    <a href="/Admin/Index" class="btn btn-secondary mt-4">Back to Blog List</a>
+</div>
+
