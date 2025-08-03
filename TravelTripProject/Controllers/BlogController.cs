@@ -28,10 +28,11 @@ namespace TravelTripProject.Controllers
             return View(blogComment);
         }
         [HttpGet]
-        public PartialViewResult AddComment()
+        public PartialViewResult AddComment(int id)
         {
-            return PartialView();
+            return PartialView(new Comment { BlogId = id });
         }
+
         [HttpPost]
         public ActionResult AddComment(Comment comment)
         {
@@ -39,6 +40,7 @@ namespace TravelTripProject.Controllers
             context.Comments.Add(comment);
             context.SaveChanges();
             return RedirectToAction("BlogDetails", new { id = comment.BlogId });
+
         }
     }
 }

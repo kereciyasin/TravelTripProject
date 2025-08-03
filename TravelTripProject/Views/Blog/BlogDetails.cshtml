@@ -1,5 +1,5 @@
 ﻿@model TravelTripProject.Models.BlogCommentViewModel
-@{
+{
     ViewBag.Title = "BlogDetails";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
@@ -58,7 +58,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </li>
                     </ul>
                 }
-                @Html.Action("AddComment", "Blog")
+                @{ Html.RenderAction("AddComment", "Blog", new { id = Model.Value1.FirstOrDefault()?.Id }); }
+
             </div>
 
 
