@@ -63,6 +63,33 @@ namespace TravelTripProject.Controllers
             return RedirectToAction("Index");
 
         }
-
+        public ActionResult CommentList()
+        {
+            var comments = context.Comments.ToList();
+            return View(comments);
+        }
+        public ActionResult DeleteComment(int id)
+        {
+            var comment = context.Comments.Find(id);
+            context.Comments.Remove(comment);
+            context.SaveChanges();
+            return RedirectToAction("CommentList");
+        }
+        [HttpGet]
+        public ActionResult EditComment(int id)
+        {
+            var comment = context.Comments.Find(id);
+            return View(comment);
+        }
+        [HttpPost]
+        public ActionResult EditComment(Comment updatedComment)
+        {
+            var comment = context.Comments.Find(updatedComment.Id);
+            comment.Username = updatedComment.Username;
+            comment.Email = updatedComment.Email;
+            comment.Content = updatedComment.Content;
+            context.SaveChanges();
+            return RedirectToAction("CommentList");
+        }
     }
 }
