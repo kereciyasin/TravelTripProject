@@ -1,0 +1,15 @@
+﻿@model TravelTripProject.Models.Comment
+
+<div class="content-form">
+    <h3>Leave a comment</h3>
+
+    @using (Html.BeginForm("AddComment", "Blog", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.BlogId)
+
+        <input type="text" name="Username" placeholder="Name" required />
+        <input type="email" name="Email" placeholder="Email" required />
+        <textarea name="Content" placeholder="Comment" required></textarea>
+        <input type="submit" value="SEND" />
+    }
+</div>
