@@ -2,17 +2,38 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>_AdminLayout</title>
+    <meta charset="utf-8" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="/Admin/Index" class="w3-bar-item w3-button">Blogs</a>
+        <a href="#" class="w3-bar-item w3-button">Comments</a>
+        <a href="#" class="w3-bar-item w3-button">Contact</a>
+        <a href="#" class="w3-bar-item w3-button">About</a>
     </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:15%">
+        <div class="w3-container w3-teal">
+            <h4>Admin Control Panel</h4>
+        </div>
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+    </div>
+
 </body>
 </html>
+
+
+
+
