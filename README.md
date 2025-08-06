@@ -8,7 +8,8 @@ It allows visitors to explore travel posts and leave comments, while providing a
 ## 📸 Screenshots
 
 ### 🌍 Home Page
-![Home Page](screenshots/homepage.png)
+![Home Page](screenshots/homepage01.png)
+![Home Page](screenshots/homepage02.png)
 
 ### 📝 Blog Details & Comments
 ![Blog Details](screenshots/blog-details.png)
@@ -18,6 +19,10 @@ It allows visitors to explore travel posts and leave comments, while providing a
 
 ### 📋 Admin - Blog List
 ![Admin Blog List](screenshots/admin-blogs.png)
+![Admin Blog List](screenshots/admin-blogs02.png)
+![Admin Blog List](screenshots/admin-blogs03.png)
+![Admin Blog List](screenshots/admin-blogs04.png)
+
 
 ### 💬 Admin - Comments
 ![Admin Comments](screenshots/admin-comments.png)
