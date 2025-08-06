@@ -1,7 +1,8 @@
 # 🧳 TravelTripProject
 
-**TravelTripProject** is a full-featured travel blog web application built using **ASP.NET MVC 5** and **Entity Framework**.  
-It allows visitors to explore travel posts and leave comments, while providing administrators a secure backend panel for managing content.
+**TravelTripProject** is a stylish and functional travel blog platform where users can share and read travel stories with stunning images, while the admin can manage all content through a secure panel.
+
+✨ A total of **4 modern UI themes** are used to enhance visual experience.
 
 ---
 
@@ -20,45 +21,62 @@ It allows visitors to explore travel posts and leave comments, while providing a
 ### 🔐 Admin Login
 ![Admin Login](screenshots/admin-login.png)
 
-### 📋 Admin - Blog List
-![Admin Blog List](screenshots/admin-blogs.png)
+### 📋 Admin - Blog Management
+![Admin Blogs](screenshots/admin-blogs.png)
 
 ### 💬 Admin - Comments
 ![Admin Comments](screenshots/admin-comments.png)
 
 ---
 
-## 🚀 Features
+## 🌟 Key Features
 
-### 🧭 Public Site
-- View all blog posts with images and dates
-- View detailed blog content
-- Post comments (Name, Email, Content)
-- Responsive UI with W3.CSS & Bootstrap
+### 👤 Public Side
+- 🏖️ Explore travel stories with images & dates
+- 💬 Add comments under each blog post (Name, Email, Message)
+- 🌟 Highlighted: Most recent and popular blogs
+- 📱 Fully responsive UI with W3.CSS + Bootstrap
+- 🎨 Multiple themes and homepage sliders for better UX
 
-### 🔒 Admin Panel
-- Admin authentication (login & logout)
-- Blog CRUD (Create, Read, Update, Delete)
-- Comment management (View, Edit, Delete)
-- Dynamic dashboard with table views
-
----
-
-## ⚙️ Technologies Used
-
-- ASP.NET MVC 5
-- Entity Framework 6
-- SQL Server LocalDB
-- LINQ & Lambda Expressions
-- Bootstrap 3 / W3.CSS
-- Forms Authentication
-- HTML5, CSS3
+### 🛡️ Admin Panel
+- 🔐 Secure login/logout (Authentication)
+- ✍️ Add / Edit / Delete / View Blogs
+- 💬 Manage all Comments (Edit/Delete)
+- 📅 Track blog publishing dates
+- 📊 Easy-to-navigate admin dashboard
 
 ---
 
-## 🛠️ Setup Instructions
+## 🔧 Technologies Used
 
-### 1. Clone the Project
+| Layer | Technology |
+|-------|------------|
+| Backend | ASP.NET MVC 5 |
+| ORM | Entity Framework 6 (Code-First) |
+| DB | SQL Server LocalDB |
+| Frontend | Bootstrap 3, W3.CSS, HTML5, CSS3 |
+| Logic | LINQ & Lambda |
+| Security | Forms Authentication |
+| UI Reuse | Partial Views |
+
+---
+
+## 💻 How to Run This Project
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/TravelTripProject.git
+git clone https://github.com/kereciyasin/TravelTripProject.git
+
+### 2. Open in Visual Studio
+
+1. Open the solution file:
+
+   ```bash
+   TravelTripProject.sln
+
+### 2. Open in Visual Studio
+
+```bash
+Update-Database
+
