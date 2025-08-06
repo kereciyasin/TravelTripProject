@@ -44,6 +44,13 @@ namespace TravelTripProject.Controllers
                 return View();
             }
         }
+        public ActionResult Logout()
+        {
+            // Clear the session and redirect to the login page
+            Session.Clear();
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "Login");
+        }
 
     }
 }
