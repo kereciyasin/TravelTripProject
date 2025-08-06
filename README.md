@@ -13,16 +13,15 @@ It allows visitors to explore travel posts and leave comments, while providing a
 
 ### 📝 Blog Details & Comments
 ![Blog Details](screenshots/blog-details.png)
+![Blog Details](screenshots/blog-details02.png)
+![Blog Details](screenshots/blog-details03.png)
+![Blog Details](screenshots/blog-details04.png)
 
 ### 🔐 Admin Login
 ![Admin Login](screenshots/admin-login.png)
 
 ### 📋 Admin - Blog List
 ![Admin Blog List](screenshots/admin-blogs.png)
-![Admin Blog List](screenshots/admin-blogs02.png)
-![Admin Blog List](screenshots/admin-blogs03.png)
-![Admin Blog List](screenshots/admin-blogs04.png)
-
 
 ### 💬 Admin - Comments
 ![Admin Comments](screenshots/admin-comments.png)
